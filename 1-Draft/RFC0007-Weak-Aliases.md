@@ -7,7 +7,7 @@ Area: Command Resolution
 
 # Weak Aliases
 
-This RFC is an attempt to address the communities desire to [remove the aliases `curl` and `wget`]((https://github.com/PowerShell/PowerShell/pull/1901)) from Windows PowerShell.
+This RFC is an attempt to address the community's desire to [remove the aliases `curl` and `wget`]((https://github.com/PowerShell/PowerShell/pull/1901)) from Windows PowerShell.
 
 ## Motivation
 
@@ -15,7 +15,7 @@ The introduction of the aliases `curl` and `wget` happened in PowerShell V3 and 
 Regretfully, removing these aliases now would also be a breaking change.
 
 An analysis of scripts from various sources was performed to understand the usage patterns of `curl` in PowerShell scripts.
-The source of scripts included the Windows code base, GitHub and a corpus of scripts collected by the PowerShell team from various sources like poshcode.org.
+The sources of scripts included the Windows code base, GitHub and a corpus of scripts collected by the PowerShell team from various sources like poshcode.org.
 
 There is a [gist](https://gist.github.com/lzybkr/3cd091334355f381d1d6ee7acfad5a48) with the code I used to analyze the scripts from GitHub.
 
@@ -38,7 +38,7 @@ rm alias:curl
 ```
 If the alias does not exist, this will result in an error, possibly breaking the script in an unexpected way.
 
-There are other scenarios where removal of the aliases cause undue difficulties for our customers.
+There are other scenarios where removal of the aliases may cause undue difficulties for our customers.
 
 * PowerShell usage in compiled code - more difficult to discover
 * Windows PowerShell updates as part of Windows, possibly breaking *users* of scripts that don't know how to fix the script
